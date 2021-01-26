@@ -1,0 +1,481 @@
+/* Variables
+  ============================= */
+
+  :root {
+    --color-primary: var(--color-red);
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-light-gray: #f2f2f2;
+    --color-red: #ff6565;
+  
+    --text-color: var(--color-white);
+    --valid-color: var(--color-green);
+    --error-color: var(--color-red);
+  
+    --font-family-base: 'Source Sans Pro', sans-serif;
+    --font-family-title: 'Source Sans Pro', sans-serif;
+  
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.7rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 3.2rem;
+    --font-size-glyph: 10rem;
+    --font-size-footer-icons: 32px;
+  
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+  
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+  
+    /** SECTION **/
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-title-margin: 220px 0 0 0;
+    --section-header-align: center;
+    --section-title-font-size: var(--font-size-xx-large);
+    --section-title-font-weight: var(--font-weight-bold);
+    --section-title-line-height: var(--line-height-small);
+    --section-title-color: var(--color-white);
+    --section-tagline-transform: uppercase;
+    --section-tagline-color: var(--color-primary);
+    --section-tagline-font-family: var(--font-family-headings);
+    --section-tagline-font-weight: var(--font-weight-bold);
+    --section-tagline-margin: 0;
+    --section-body-padding: 2rem 0 4rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+  
+    /** HEADER **/
+    --header-padding: 2rem 0 0;
+  
+    /** FOOTER **/
+    --footer-padding: 5rem 0 1rem;
+  
+    /** BUTTON **/
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-margin: 3rem 0 6rem;
+    --button-border-radius: 50px;
+    --button-color: var(--color-white);
+    --button-text-decoration: none;
+    --button-text-transform: uppercase;
+    --button-font-size: var(--font-size-large);
+    --button-background: var(--color-primary);
+  }
+  
+  /* Base
+        ============================= */
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    text-align: center;
+  }
+  
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    margin: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  h1 {
+    margin-top: 15rem;
+  }
+  
+  h2 {
+    font-size: var(--font-size-large);
+  }
+  
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  p {
+    margin: 1rem;
+  }
+  
+  .button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    margin: var(--button-margin);
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    background: var(--button-background);
+    text-decoration: var(--button-text-decoration);
+    text-transform: var(--button-text-transform);
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .button:active {
+    opacity: 0.9;
+  }
+  
+  .holberton_school-icon-ic_sound,
+  .holberton_school-icon-ic_music,
+  .holberton_school-icon-ic_video,
+  .holberton_school-icon-ic_hearing {
+    font-size: var(--font-size-glyph);
+    color: var(--color-red);
+  }
+  
+  /* Layout
+        ============================= */
+  
+  .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Grid
+        ============================= */
+  
+  ul.row {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .col-1-4 {
+    width: 25%;
+    margin: 0 1rem 10rem;
+  }
+  
+  /* Navbar
+        ============================= */
+  
+  .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+  }
+  
+  .nav li {
+    margin: 0;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+  
+  .nav a:hover,
+  .nav a:active {
+    color: var(--color-primary);
+  }
+  
+  /* Header
+        ============================= */
+  
+  .header {
+    padding: var(--header-padding);
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    background-image: url(images/headphones_hero_1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .header img {
+    margin-left: 2rem;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-container a {
+    margin: 1rem;
+  }
+  
+  /* Section (all styles)
+        ============================= */
+  .section {
+    padding: var(--section-padding);
+  }
+  
+  .section-title {
+    font-size: var(--section-title-font-size);
+    font-weight: var(--section-title-font-weight);
+    line-height: var(--section-title-line-height);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+  }
+  
+  .section-body {
+    padding: var(--section-body-padding);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Menu Button */
+  .menu-btn,
+  .menu-icon,
+  .navicon {
+    display: none;
+  }
+  
+  .menu-btn:checked ~ nav {
+    display: block;
+  }
+  
+  .menu-btn:checked ~ nav .nav {
+    max-height: 100%;
+    overflow: inherit;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon::before,
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0;
+  }
+  
+  /* What we do
+        ============================= */
+  
+  .what {
+    color: var(--color-black);
+  }
+  
+  /* Results
+        ============================= */
+  
+  .results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .pentagon {
+    background-image: url(images/pentagone.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 190px;
+    min-height: 190px;
+  }
+  
+  .pentagon-percent {
+    font-size: 5rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+  
+  .pentagon p {
+    margin: 0;
+  }
+  
+  /* Contact
+        ============================= */
+  
+  .contact {
+    color: var(--color-black);
+  }
+  
+  .contact-form {
+    display: block;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  
+  input {
+    display: block;
+    height: 6rem;
+    width: 50%;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid var(--color-light-gray);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  ::placeholder {
+    color: var(--color-black);
+    opacity: 1;
+  }
+  
+  .contact .button {
+    margin-top: 5rem;
+  }
+  
+  /* Footer
+        ============================= */
+  
+  .footer {
+    background-color: var(--color-black);
+    height: 15rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--section-footer-padding);
+  }
+  
+  .footer p {
+    color: var(--color-white);
+    opacity: 0.35;
+  }
+  
+  .social {
+    margin: 0.5rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .holberton_school-icon-ic_facebook,
+  .holberton_school-icon-ic_twitter,
+  .holberton_school-icon-ic_instagram {
+    font-size: var(--font-size-footer-icons);
+    color: var(--color-white);
+  }
+  
+  @media screen and (max-width: 850px) {
+    ul.row,
+    .row {
+      flex-wrap: wrap;
+    }
+  
+    .col-1-4 {
+      width: calc((100% / 2) - 2rem);
+    }
+  
+    .footer-container {
+      padding-top: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .header-container {
+      flex-direction: column;
+    }
+  
+    .nav {
+      flex-direction: column;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+  
+    .nav li {
+      margin: 0 0 3rem 3rem;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .navicon {
+      background: var(--color-white);
+      display: block;
+      width: 1.5rem;
+      height: 0.2rem;
+      position: relative;
+      transition: background 0.2s ease-out;
+      margin-left: 2rem;
+    }
+  
+    .navicon::before,
+    .navicon::after {
+      content: '';
+      display: block;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      background: var(--color-white);
+      transition: all 0.2s ease-out;
+    }
+  
+    .navicon::before {
+      top: 0.7rem;
+    }
+  
+    .navicon::after {
+      top: -0.7rem;
+    }
+  
+    ul.row,
+    .row {
+      flex-direction: column;
+      margin: 0;
+    }
+  
+    .col-1-4 {
+      width: 100%;
+    }
+  
+    input {
+      width: 90%;
+    }
+  
+    .footer {
+      height: 25rem;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+    }
+  
+    .social {
+      padding: 1rem 0;
+    }
+  }
