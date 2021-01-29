@@ -7,3 +7,5 @@ I didn’t have a lot of instruction, I was free to implement it the way that I 
 *This webpage has been designed by Nicolas Philippot, UI/UX designer.*
 
 Here the final result:
+
+[!Optional text](../master/images/forradme.jpg)
