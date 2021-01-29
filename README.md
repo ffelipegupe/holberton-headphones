@@ -8,4 +8,5 @@ I didn’t have a lot of instruction, I was free to implement it the way that I 
 
 Here the final result:
 
-[!Optional text](../master/images/forradme.jpg)
+<img src="/images/forradme.jpg" alt="Final result of the website"/>
+
